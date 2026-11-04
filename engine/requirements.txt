@@ -1,0 +1,10 @@
+# AegisCredit AI - Python Underwriting & Counterfactual Engine
+# Crafted by Mohd Amir Ali (https://techwithamir.com)
+# Standard library execution requires zero external packages.
+# Optional packages below are provided for notebook/API extensions:
+numpy>=1.26.0
+pandas>=2.2.0
+scikit-learn>=1.4.0
+shap>=0.45.0
+fastapi>=0.110.0
+uvicorn>=0.29.0
