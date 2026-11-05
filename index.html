@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-brand="client">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Credibiliti-AI | Smart, Private Loan Eligibility &amp; Instant Approval System</title>
+  <!-- Enlarged C-Graph Emblem in Browser Tab Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%2314B8A6'/%3E%3Cpath d='M19.8 6.4A9.2 9.2 0 1 0 19.8 17.6' fill='none' stroke='%23021715' stroke-width='2.6' stroke-linecap='round'/%3E%3Cpath d='M9.2 16v-3.2M12.8 16v-5.8M16.4 16v-8.4' stroke='%23021715' stroke-width='2.3' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
+</head>
+<body>
+
+  <!-- ========================================================================
+       0. FULL-SCREEN BRANDED LOGIN TRANSITION LOADER BUFFER
+          - Circular click-origin expansion into 100% SOLID Teal (Client) or
+            SOLID Amber-Orange (Bank) with ZERO background card reflection
+          - Flowing wave lines & 12 geometric finance icons convert to Jet Black
+            (#000000) and keep streaming while the Home Screen loads
+          - Credibiliti-AI Brand Lockup + Tagline glides to upper-middle center
+            above the 4-stage financial setup loader
+       ======================================================================== -->
+  <div id="login-transition-loader" class="login-transition-loader hidden" role="status" aria-live="polite">
+    <!-- Jet-Black Flowing Wave Lines & 12 Geometric Finance Icons Over Solid Primary Canvas -->
+    <div class="loader-waves-layer" aria-hidden="true">
+      <svg class="flowing-waves-svg loader-waves-svg" viewBox="0 0 1440 800" preserveAspectRatio="none">
+        <path class="wave-path wave-path-1 loader-wave-path" d="M-100,145 C320,45 620,285 1020,135 C1260,45 1420,195 1560,135" />
+        <path class="wave-path wave-path-2 loader-wave-path" d="M-100,315 C280,445 680,175 1080,335 C1300,425 1440,265 1560,315" />
+        <path class="wave-path wave-path-3 loader-wave-path" d="M-100,495 C360,365 720,605 1120,445 C1320,355 1460,495 1560,465" />
+        <path class="wave-path wave-path-4 loader-wave-path" d="M-100,655 C300,735 760,525 1160,655 C1360,715 1480,605 1560,645" />
+      </svg>
+
+      <div class="wave-clipart-layer loader-clipart-layer">
+        <!-- WAVE TRACK 1 -->
+        <div class="wave-icon-node loader-icon-node shape-circle wave-track-1 stream-offset-1">₹</div>
+        <div class="wave-icon-node loader-icon-node shape-dotted-circle wave-track-1 stream-offset-2">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <path d="M6 19v-5M12 19V9M18 19V4" />
+          </svg>
+        </div>
+        <div class="wave-icon-node loader-icon-node shape-square wave-track-1 stream-offset-3">$</div>
+
+        <!-- WAVE TRACK 2 -->
+        <div class="wave-icon-node loader-icon-node shape-circle wave-track-2 stream-offset-4">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+            <polyline points="16 7 22 7 22 13" />
+          </svg>
+        </div>
+        <div class="wave-icon-node loader-icon-node shape-dotted-circle wave-track-2 stream-offset-5">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M3 21h18M3 10h18M5 6l7-3 7 3M6 10v8M12 10v8M18 10v8" />
+          </svg>
+        </div>
+        <div class="wave-icon-node loader-icon-node shape-square wave-track-2 stream-offset-6">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <ellipse cx="12" cy="6" rx="8" ry="3" />
+            <path d="M4 6v6c0 1.66 3.58 3 8 3s8-1.34 8-3V6" />
+            <path d="M4 12v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6" />
+          </svg>
+        </div>
+
+        <!-- WAVE TRACK 3 -->
+        <div class="wave-icon-node loader-icon-node shape-diamond wave-track-3 stream-offset-1">
+          <span>₹</span>
+        </div>
+        <div class="wave-icon-node loader-icon-node shape-diamond wave-track-3 stream-offset-2">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+        </div>
+        <div class="wave-icon-node loader-icon-node shape-diamond wave-track-3 stream-offset-3">
+          <span>%</span>
+        </div>
+
+        <!-- WAVE TRACK 4 -->
+        <div class="wave-icon-node loader-icon-node shape-circle wave-track-4 stream-offset-4">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+            <path d="M22 12A10 10 0 0 0 12 2v10z" />
+          </svg>
+        </div>
+        <div class="wave-icon-node loader-icon-node shape-dotted-circle wave-track-4 stream-offset-5">$</div>
+        <div class="wave-icon-node loader-icon-node shape-square wave-track-4 stream-offset-6">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <rect x="2" y="5" width="20" height="14" rx="2" />
+            <line x1="2" y1="10" x2="22" y2="10" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center Stage: Gliding Brand Header + Animated C-Graph Loader + 4-Stage Progress -->
+    <div class="loader-center-stage">
+      <div class="loader-brand-lockup" id="loader-brand-lockup">
+        <div class="loader-brand-row">
+          <div class="loader-brand-crest" aria-hidden="true">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19.8 6.4A9.2 9.2 0 1 0 19.8 17.6" />
+              <path d="M9.2 16v-3.2" stroke-width="2.3" />
+              <path d="M12.8 16v-5.8" stroke-width="2.3" />
+              <path d="M16.4 16v-8.4" stroke-width="2.3" />
+            </svg>
+          </div>
+          <span class="loader-brand-wordmark">Credibiliti-AI</span>
+        </div>
+        <span class="loader-brand-tagline">Smart, Private Loan Eligibility &amp; Instant Approval System</span>
+      </div>
+
+      <div class="loader-emblem-ring">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path class="loader-c-arc" d="M19.8 6.4A9.2 9.2 0 1 0 19.8 17.6" />
+          <path class="loader-bar-1" d="M9.2 16v-3.2" stroke-width="2.4" />
+          <path class="loader-bar-2" d="M12.8 16v-5.8" stroke-width="2.4" />
+          <path class="loader-bar-3" d="M16.4 16v-8.4" stroke-width="2.4" />
+        </svg>
+      </div>
+
+      <div class="loader-stage-pill mono" id="loader-stage-pill">STAGE 1 OF 4 &bull; PORTAL HANDSHAKE</div>
+      <div class="loader-title" id="loader-title-text">Setting you up...</div>
+      <div class="loader-subtitle" id="loader-subtitle-text">
+        Encrypting Zero-Knowledge KYC Vault &amp; synchronizing your credit eligibility profile...
+      </div>
+
+      <!-- 4-Stage Segmented Progress Track in Jet Black -->
+      <div class="loader-steps-grid" aria-hidden="true">
+        <div class="loader-step-segment active" id="loader-step-1"><span class="loader-step-fill"></span></div>
+        <div class="loader-step-segment" id="loader-step-2"><span class="loader-step-fill"></span></div>
+        <div class="loader-step-segment" id="loader-step-3"><span class="loader-step-fill"></span></div>
+        <div class="loader-step-segment" id="loader-step-4"><span class="loader-step-fill"></span></div>
+      </div>
+
+      <div class="loader-progress-track">
+        <div class="loader-progress-fill" id="loader-progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       1. FULL-SCREEN DUAL-SCENE LOGIN GATEWAY (CREDIBILITI-AI)
+          - Pure Black (#000000) Dark Mode Canvas
+          - Full-Viewport 100vw Scene Slide (Zero Container Shadow Line!)
+          - Sun/Half-Moon Icon Button with Hover Tooltip
+       ======================================================================== -->
+  <section id="login-gateway" class="login-gateway" data-login-role="client">
+    <!-- Background Wave Lines + 12 Continuously Streaming Geometric Icon Nodes -->
+    <div class="login-waves-Layer" aria-hidden="true">
+      <svg class="flowing-waves-svg" viewBox="0 0 1440 800" preserveAspectRatio="none">
+        <path class="wave-path wave-path-1" d="M-100,145 C320,45 620,285 1020,135 C1260,45 1420,195 1560,135" />
+        <path class="wave-path wave-path-2" d="M-100,315 C280,445 680,175 1080,335 C1300,425 1440,265 1560,315" />
+        <path class="wave-path wave-path-3" d="M-100,495 C360,365 720,605 1120,445 C1320,355 1460,495 1560,465" />
+        <path class="wave-path wave-path-4" d="M-100,655 C300,735 760,525 1160,655 C1360,715 1480,605 1560,645" />
+      </svg>
+
+      <div class="wave-clipart-layer">
+        <!-- WAVE TRACK 1 -->
+        <div class="wave-icon-node shape-circle wave-track-1 stream-offset-1">₹</div>
+        <div class="wave-icon-node shape-dotted-circle wave-track-1 stream-offset-2">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <path d="M6 19v-5M12 19V9M18 19V4" />
+          </svg>
+        </div>
+        <div class="wave-icon-node shape-square wave-track-1 stream-offset-3">$</div>
+
+        <!-- WAVE TRACK 2 -->
+        <div class="wave-icon-node shape-circle wave-track-2 stream-offset-4">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+            <polyline points="16 7 22 7 22 13" />
+          </svg>
+        </div>
+        <div class="wave-icon-node shape-dotted-circle wave-track-2 stream-offset-5">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M3 21h18M3 10h18M5 6l7-3 7 3M6 10v8M12 10v8M18 10v8" />
+          </svg>
+        </div>
+        <div class="wave-icon-node shape-square wave-track-2 stream-offset-6">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <ellipse cx="12" cy="6" rx="8" ry="3" />
+            <path d="M4 6v6c0 1.66 3.58 3 8 3s8-1.34 8-3V6" />
+            <path d="M4 12v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6" />
+          </svg>
+        </div>
+
+        <!-- WAVE TRACK 3 -->
+        <div class="wave-icon-node shape-diamond wave-track-3 stream-offset-1">
+          <span>₹</span>
+        </div>
+        <div class="wave-icon-node shape-diamond wave-track-3 stream-offset-2">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+        </div>
+        <div class="wave-icon-node shape-diamond wave-track-3 stream-offset-3">
+          <span>%</span>
+        </div>
+
+        <!-- WAVE TRACK 4 -->
+        <div class="wave-icon-node shape-circle wave-track-4 stream-offset-4">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+            <path d="M22 12A10 10 0 0 0 12 2v10z" />
+          </svg>
+        </div>
+        <div class="wave-icon-node shape-dotted-circle wave-track-4 stream-offset-5">$</div>
+        <div class="wave-icon-node shape-square wave-track-4 stream-offset-6">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <rect x="2" y="5" width="20" height="14" rx="2" />
+            <line x1="2" y1="10" x2="22" y2="10" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top Header Bar with Enlarged Credibiliti-AI Emblem & Icon-Only Sun/Moon Toggle -->
+    <header class="login-header-bar">
+      <div></div>
+
+      <div class="brand-center-lockup">
+        <div class="brand-center-row">
+          <div class="aegis-crest-logo" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19.8 6.4A9.2 9.2 0 1 0 19.8 17.6" />
+              <path d="M9.2 16v-3.2" stroke-width="2.3" />
+              <path d="M12.8 16v-5.8" stroke-width="2.3" />
+              <path d="M16.4 16v-8.4" stroke-width="2.3" />
+            </svg>
+          </div>
+          <span class="brand-main-title">Credibiliti-AI</span>
+        </div>
+        <span class="brand-center-tagline">Smart, Private Loan Eligibility &amp; Instant Approval System</span>
+      </div>
+
+      <div class="header-right-controls">
+        <button type="button" class="icon-action-btn" id="login-theme-toggle" data-tooltip="Click to change to Light Mode" aria-label="Toggle Theme">
+          <svg class="moon-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+          </svg>
+          <svg class="sun-svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5" />
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- FIXED CENTER ROLE SWITCHER BUTTON -->
+    <div class="locked-center-switcher-wrap">
+      <div class="role-selector-bar" role="tablist" aria-label="Select Client or Bank Portal">
+        <div class="role-selector-indicator" aria-hidden="true"></div>
+        <button type="button" class="role-tab-btn active" id="role-tab-client" data-role="client" role="tab" aria-selected="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          Client Login
+        </button>
+        <button type="button" class="role-tab-btn" id="role-tab-bank" data-role="bank" role="tab" aria-selected="false">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3" />
+          </svg>
+          Bank Login
+        </button>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         FULL-VIEWPORT 100VW DUAL-SCENE HORIZONTAL CAROUSEL
+         - Each .login-scene-frame is 100vw wide so box-shadows are NEVER cut off!
+         - Clicking Bank Login slides the ENTIRE Client Scene off the left edge
+           of the screen (-100vw) and reveals the Bank Scene from the right!
+         ====================================================================== -->
+    <div class="login-carousel-viewport">
+      <div class="login-carousel-track" id="login-carousel-track">
+
+        <!-- SCENE 1 FRAME (100VW): CLIENT SCENE -->
+        <div class="login-scene-frame">
+          <div class="login-scene" id="scene-client">
+            <div class="login-context-column">
+              <div class="role-context-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+                <span>Client Privacy &amp; Loan System</span>
+              </div>
+
+              <h1 class="login-hero-heading">
+                Check your loan eligibility in ₹ privately while keeping your personal KYC details protected.
+              </h1>
+
+              <p class="login-hero-subtext">
+                Credibiliti-AI lets you check your loan eligibility, keep your PAN and Bank Account numbers encrypted via Zero-Knowledge proofs, and unlock 1-click Approval Boosters.
+              </p>
+
+              <div class="role-artwork-showcase">
+                <div class="role-art-svg-box">
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9">
+                    <path d="M12 2L4 5.5v6c0 5.3 3.4 10.2 8 11.5 4.6-1.3 8-6.2 8-11.5v-6L12 2z" />
+                    <rect x="8.5" y="9.5" width="7" height="5" rx="1" />
+                    <path d="M10 9.5V8a2 2 0 014 0v1.5" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="card-eyebrow">CLIENT PRIVACY SHIELD</span>
+                  <h4 style="font-size:15px; margin:2px 0;">Selective Identity Protection</h4>
+                  <p style="font-size:12.5px; color:var(--text-secondary);">
+                    Your verified legal name appears on your Pre-Approval Pass while sensitive PAN, Bank Account/IFSC, and raw Bureau Score stay masked.
+                  </p>
+                </div>
+              </div>
+
+              <div class="login-feature-list">
+                <div class="login-feature-item">
+                  <div class="login-feature-icon">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      <circle cx="12" cy="11" r="2" /><path d="M12 13v3" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4>Selective Zero-Knowledge KYC Shield</h4>
+                    <p>We protect your personal details (PAN, Account/IFSC, and raw Bureau Score) via SHA-256 masking while keeping your name verifiable.</p>
+                  </div>
+                </div>
+
+                <div class="login-feature-item">
+                  <div class="login-feature-icon">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M6 20v-6M12 20V10M18 20V4" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4>3-Step Guided Loan Eligibility</h4>
+                    <p>Check your monthly EMI, FOIR/DTI ratio, and approval probability in seconds with zero hard bureau inquiry.</p>
+                  </div>
+                </div>
+
+                <div class="login-feature-item">
+                  <div class="login-feature-icon">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4>1-Click Counterfactual Approval Boosters</h4>
+                    <p>Restructure tenure, principal, or collateral in one click to turn a borderline case into an approved loan.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="login-card-column">
+              <div class="login-card">
+                <div class="client-auth-mode-tabs" id="client-auth-mode-tabs">
+                  <button type="button" class="auth-mode-btn active" id="btn-mode-signin">Existing Client Sign-In</button>
+                  <button type="button" class="auth-mode-btn" id="btn-mode-register">Register New Client</button>
+                </div>
+
+                <div class="login-card-header">
+                  <h2>Sign in as a Client</h2>
+                  <p>Select a client profile or register a new profile to open your private loan workspace.</p>
+                </div>
+
+                <form id="client-login-form" class="login-form">
+                  <div class="form-field">
+                    <label for="client-profile-select">
+                      <span>Select Client Profile</span>
+                    </label>
+                    <div class="select-wrapper">
+                      <select id="client-profile-select" class="select-control">
+                        <option value="aarav">Aarav Sharma | Senior Cloud Architect, Bengaluru</option>
+                        <option value="zoya">Zoya Khan | Biotech Founder, Hyderabad</option>
+                        <option value="david">David D'Souza | Marine Logistics Director, Mumbai</option>
+                        <option value="harpreet">Harpreet Singh Gill | Agri-Tech Entrepreneur, Chandigarh</option>
+                      </select>
+                      <span class="select-chevron-icon" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                          <path d="M6 9l6 6 6-6" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="client-login-identifier">Client Email or Sovereign ID</label>
+                    <input type="text" id="client-login-identifier" class="input-control mono" value="aarav.sharma@bengaluru-cloud.in" required />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="client-login-secret">Zero-Knowledge Vault Passphrase</label>
+                    <input type="password" id="client-login-secret" class="input-control mono" value="CREDIBILITI-SOVEREIGN-KEY" required />
+                  </div>
+
+                  <button type="submit" class="primary-submit-btn">
+                    <span>Launch Client Workspace</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </form>
+
+                <form id="register-form" class="login-form hidden">
+                  <div class="form-grid-2">
+                    <div class="form-field">
+                      <label for="reg-name">Full Legal Name</label>
+                      <input type="text" id="reg-name" class="input-control" placeholder="e.g. Rohan Verma" required />
+                    </div>
+                    <div class="form-field">
+                      <label for="reg-email">Email Address</label>
+                      <input type="email" id="reg-email" class="input-control mono" placeholder="rohan@enterprise.in" required />
+                    </div>
+                  </div>
+
+                  <div class="form-grid-2">
+                    <div class="form-field">
+                      <label for="reg-employer">Employer / Enterprise</label>
+                      <input type="text" id="reg-employer" class="input-control" placeholder="e.g. Bharat FinTech Labs Pvt Ltd" required />
+                    </div>
+                    <div class="form-field">
+                      <label for="reg-pan">PAN / KYC ID (Auto-Blinded)</label>
+                      <input type="text" id="reg-pan" class="input-control mono" placeholder="ABCDE1234F" required />
+                    </div>
+                  </div>
+
+                  <div class="form-grid-2">
+                    <div class="form-field">
+                      <label for="reg-income">Gross Annual Income (₹)</label>
+                      <input type="number" id="reg-income" class="input-control mono" value="1800000" min="300000" step="50000" required />
+                    </div>
+                    <div class="form-field">
+                      <label for="reg-loan">Requested Loan Amount (₹)</label>
+                      <input type="number" id="reg-loan" class="input-control mono" value="2500000" min="100000" step="50000" required />
+                    </div>
+                  </div>
+
+                  <div class="form-grid-2">
+                    <div class="form-field">
+                      <label for="reg-score">Credit Bureau Score (300-850)</label>
+                      <input type="number" id="reg-score" class="input-control mono" value="685" min="300" max="850" required />
+                    </div>
+                    <div class="form-field">
+                      <label for="reg-debt">Existing Monthly EMI / Debt (₹)</label>
+                      <input type="number" id="reg-debt" class="input-control mono" value="18000" min="0" step="1000" required />
+                    </div>
+                  </div>
+
+                  <button type="submit" class="primary-submit-btn">
+                    <span>Register Client &amp; Generate Passkey</span>
+                  </button>
+                </form>
+
+                <div class="login-security-note">
+                  SHA-256 Selective KYC Masking &bull; Based on RBI Fair Practices &amp; Basel III
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SCENE 2 FRAME (100VW): BANK SCENE (Zero Left Clipping!) -->
+        <div class="login-scene-frame">
+          <div class="login-scene bank-scene-grid" id="scene-bank">
+            <div class="login-card-column">
+              <div class="login-card">
+                <div class="login-card-header">
+                  <h2>Authenticate Bank Underwriter Desk</h2>
+                  <p>Sign in to the institutional risk console to audit client passkeys, Basel III metrics, and SHAP visuals.</p>
+                </div>
+
+                <form id="bank-login-form" class="login-form">
+                  <div class="form-field">
+                    <label for="bank-profile-select">
+                      <span>Select Client Profile</span>
+                    </label>
+                    <div class="select-wrapper">
+                      <select id="bank-profile-select" class="select-control">
+                        <option value="aarav">Aarav Sharma | Senior Cloud Architect, Bengaluru</option>
+                        <option value="zoya">Zoya Khan | Biotech Founder, Hyderabad</option>
+                        <option value="david">David D'Souza | Marine Logistics Director, Mumbai</option>
+                        <option value="harpreet">Harpreet Singh Gill | Agri-Tech Entrepreneur, Chandigarh</option>
+                      </select>
+                      <span class="select-chevron-icon" aria-hidden="true">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                          <path d="M6 9l6 6 6-6" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="bank-login-identifier">Institutional Officer ID / Desk Code</label>
+                    <input type="text" id="bank-login-identifier" class="input-control mono" value="DESK-RBI-BASEL-MUMBAI-01" required />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="bank-login-secret">Basel III Risk Committee Token</label>
+                    <input type="password" id="bank-login-secret" class="input-control mono" value="CREDIBILITI-BANK-KEY" required />
+                  </div>
+
+                  <button type="submit" class="primary-submit-btn">
+                    <span>Launch Bank Underwriter Console</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </form>
+
+                <div class="login-security-note">
+                  SHA-256 Selective KYC Masking &bull; Based on RBI Fair Practices &amp; Basel III
+                </div>
+              </div>
+            </div>
+
+            <div class="login-context-column">
+              <div class="role-context-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11" />
+                </svg>
+                <span>Bank Underwriting Console</span>
+              </div>
+
+              <h1 class="login-hero-heading">
+                Underwrite loan facilities with Basel III telemetry &amp; SHAP explainability.
+              </h1>
+
+              <p class="login-hero-subtext">
+                Inspect incoming client passkeys where legal names are verified for sanctioning while sensitive PAN, Account/IFSC, and raw Bureau Scores remain cryptographically protected.
+              </p>
+
+              <div class="role-artwork-showcase">
+                <div class="role-art-svg-box">
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9">
+                    <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3" />
+                  </svg>
+                </div>
+                <div>
+                  <span class="card-eyebrow">INSTITUTIONAL BASEL III ENGINE</span>
+                  <h4 style="font-size:15px; margin:2px 0;">Bias-Free Quantitative Underwriting</h4>
+                  <p style="font-size:12.5px; color:var(--text-secondary);">
+                    Evaluates 12-Month Probability of Default (PD), Loss Given Default (LGD), Expected Credit Loss (ECL), and 7-factor SHAP attributions.
+                  </p>
+                </div>
+              </div>
+
+              <div class="login-feature-list">
+                <div class="login-feature-item">
+                  <div class="login-feature-icon">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94" />
+                      <path d="M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19" />
+                      <line x1="1" y1="1" x2="23" y2="23" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4>Selective KYC Privacy &amp; Bias Prevention</h4>
+                    <p>Verify 4 boolean policy threshold predicates (`Score &gt;= 650`, `FOIR/DTI &lt;= 42%`) without raw KYC exposure.</p>
+                  </div>
+                </div>
+
+                <div class="login-feature-item">
+                  <div class="login-feature-icon">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 3v18M5 8l7-3 7 3M3 14l3-6 3 6a3 3 0 01-6 0zM15 14l3-6 3 6a3 3 0 01-6 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4>Basel III &amp; RBI Serviceability Telemetry</h4>
+                    <p>Real-time 12M PD%, collateral-adjusted LGD%, Exposure at Default (EAD), and Expected Credit Loss.</p>
+                  </div>
+                </div>
+
+                <div class="login-feature-item">
+                  <div class="login-feature-icon">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="8" r="6" />
+                      <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4>Interactive Visual Diagnostics &amp; Official Sanction Seal</h4>
+                    <p>Inspect outflow savings charts, PD vs. FOIR risk quadrants, and issue sealed Authorization Letters.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="login-footer">
+      <span>Credibiliti-AI | Smart, Private Loan Eligibility &amp; Instant Approval System</span>
+      <span>Concept &amp; Built by <a href="https://techwithamir.com" target="_blank" rel="noopener">techwithamir.com</a></span>
+    </footer>
+  </section>
+
+  <!-- ========================================================================
+       2. ROLE SWITCH RE-AUTHENTICATION LOGIN MODAL
+       ======================================================================== -->
+  <div id="portal-auth-modal" class="auth-modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="auth-modal-heading">
+    <div class="auth-modal-card">
+      <div class="auth-modal-top">
+        <span class="auth-modal-badge" id="auth-modal-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <rect x="3" y="11" width="18" height="11" rx="2" />
+            <path d="M7 11V7a5 5 0 0110 0v4" />
+          </svg>
+          <span id="auth-modal-badge-text">ROLE AUTHENTICATION REQUIRED</span>
+        </span>
+        <button type="button" class="toast-close-btn" id="auth-modal-close-btn">Cancel [X]</button>
+      </div>
+
+      <div>
+        <h3 id="auth-modal-heading" style="font-size:18px; margin-bottom:4px;">Authenticate Bank Underwriter Desk</h3>
+        <p id="auth-modal-subtext" style="font-size:12.5px; color:var(--text-secondary);">
+          Direct switching between Client and Bank portals is restricted. Please verify credentials for the target portal or return to the main Login Gateway.
+        </p>
+      </div>
+
+      <form id="portal-auth-form" class="login-form">
+        <div class="form-field">
+          <label for="modal-auth-id" id="modal-auth-id-label">Institutional Officer ID / Desk Code</label>
+          <input type="text" id="modal-auth-id" class="input-control mono" value="DESK-RBI-BASEL-MUMBAI-01" required />
+        </div>
+
+        <div class="form-field">
+          <label for="modal-auth-secret" id="modal-auth-secret-label">Basel III Risk Committee Passphrase</label>
+          <input type="password" id="modal-auth-secret" class="input-control mono" value="CREDIBILITI-BANK-KEY" required />
+        </div>
+
+        <div class="auth-modal-actions">
+          <button type="button" class="secondary-btn" id="modal-return-gateway-btn" style="justify-content:center; height:42px;">
+            Main Login Screen
+          </button>
+          <button type="submit" class="primary-submit-btn" style="height:42px;">
+            <span id="modal-auth-submit-text">Authenticate &amp; Enter</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       3. AUTO-CLOSING POST-LOGIN CASE SUMMARY POPUP TOAST (5-SECOND TIMER)
+       ======================================================================== -->
+  <aside id="case-brief-toast" class="case-brief-toast hidden" role="status" aria-live="polite">
+    <div class="toast-body">
+      <div class="toast-header">
+        <span class="card-eyebrow" id="toast-role-eyebrow">POST-LOGIN CASE BRIEF</span>
+        <button type="button" class="toast-close-btn" id="toast-close-btn">Dismiss [X]</button>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <strong style="font-size:15px;" id="toast-profile-name">Aarav Sharma</strong>
+        <span class="status-pill approved" id="toast-verdict-pill">APPROVED</span>
+      </div>
+      <p style="font-size:12.5px; color:var(--text-secondary);" id="toast-case-summary">
+        Requested Facility: ₹28,00,000 | Post-Loan FOIR/DTI: 33.0%.
+      </p>
+      <div style="font-size:11px; color:var(--text-muted);" class="mono" id="toast-countdown-label">
+        Auto-closing in 5.0s...
+      </div>
+    </div>
+    <div class="toast-timer-bar">
+      <div class="toast-timer-fill" id="toast-timer-fill"></div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       4. UNIFORM LOGGED-IN APPLICATION SHELL (PURE BLACK DARK MODE + ICON TOPBAR)
+       ======================================================================== -->
+  <div id="app-shell" class="app-shell hidden" data-portal="client">
+    <aside class="app-sidebar">
+      <div class="sidebar-top">
+        <div class="brand-center-row">
+          <div class="aegis-crest-logo sidebar-size" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19.8 6.4A9.2 9.2 0 1 0 19.8 17.6" />
+              <path d="M9.2 16v-3.2" stroke-width="2.3" />
+              <path d="M12.8 16v-5.8" stroke-width="2.3" />
+              <path d="M16.4 16v-8.4" stroke-width="2.3" />
+            </svg>
+          </div>
+          <div>
+            <div class="brand-main-title" style="font-size:17px;">Credibiliti-AI</div>
+            <div class="brand-center-tagline" id="sidebar-portal-subtitle" style="font-size:11px; text-align:left;">Client Workspace</div>
+          </div>
+        </div>
+
+        <div class="portal-mode-badge">
+          <div>
+            <span class="portal-mode-dot"></span>
+            <span id="active-user-badge">Aarav Sharma</span>
+          </div>
+          <span class="mono" id="active-role-tag" style="font-size:11px; color:var(--duotone-accent);">CLIENT</span>
+        </div>
+
+        <nav class="sidebar-nav" id="client-sidebar-nav" aria-label="Client Navigation">
+          <div class="sidebar-nav-label">Client Workspace</div>
+          <button type="button" class="nav-item-btn active" data-view="client-overview">
+            Overview &amp; How It Works
+          </button>
+          <button type="button" class="nav-item-btn" data-view="client-wizard">
+            3-Step Loan Eligibility
+          </button>
+          <button type="button" class="nav-item-btn" data-view="client-zk-vault">
+            Privacy Shield &amp; Passkey
+          </button>
+          <button type="button" class="nav-item-btn" data-view="client-certificate">
+            Authorization Letter (PDF)
+          </button>
+        </nav>
+
+        <nav class="sidebar-nav hidden" id="bank-sidebar-nav" aria-label="Bank Navigation">
+          <div class="sidebar-nav-label">Institutional Desk</div>
+          <button type="button" class="nav-item-btn active" data-view="bank-overview">
+            Desk Overview &amp; Mandate
+          </button>
+          <button type="button" class="nav-item-btn" data-view="bank-queue">
+            Client Passkey Queue
+          </button>
+          <button type="button" class="nav-item-btn" data-view="bank-basel">
+            Basel III, SHAP &amp; Visuals
+          </button>
+          <button type="button" class="nav-item-btn" data-view="bank-certificate">
+            Sanction &amp; Audit Letter (PDF)
+          </button>
+        </nav>
+      </div>
+
+      <div class="sidebar-bottom">
+        <div class="passkey-sidebar-box">
+          <div>
+            <span>Active Handshake Passkey</span>
+            <strong class="mono" id="sidebar-passkey-code">CRED-401-IN</strong>
+          </div>
+          <button type="button" class="copy-passkey-btn" id="copy-passkey-btn" title="Copy Passkey">Copy</button>
+        </div>
+        <div style="font-size:11.5px; color:var(--text-secondary); display:flex; justify-content:space-between;">
+          <span>Concept &amp; Built by</span>
+          <a href="https://techwithamir.com" target="_blank" rel="noopener" class="app-footer-link">techwithamir.com</a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="app-main">
+      <!-- Top Bar: Removed Verdict Pill; Added 4 Icon-Only Buttons with Hover Tooltips & Profile Popover -->
+      <header class="app-topbar">
+        <div class="topbar-left">
+          <span class="topbar-Left-title" id="topbar-view-title">Client Overview &amp; How Credibiliti-AI Protects You</span>
+        </div>
+
+        <div class="topbar-actions">
+          <!-- 1. Bank / Client Switch Icon Button -->
+          <button type="button" class="icon-action-btn" id="quick-switch-portal-btn" data-tooltip="Switch to Bank • Login Required" aria-label="Switch Portal">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3" />
+            </svg>
+          </button>
+
+          <!-- 2. Sun / Half-Moon Theme Icon Button -->
+          <button type="button" class="icon-action-btn" id="app-theme-toggle" data-tooltip="Click to change to Light Mode" aria-label="Toggle Theme">
+            <svg class="moon-svg-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+            </svg>
+            <svg class="sun-svg-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5" />
+              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+            </svg>
+          </button>
+
+          <!-- 3. User Profile Icon with Hover Details Popover -->
+          <div class="profile-popover-wrapper">
+            <button type="button" class="icon-action-btn" aria-label="Logged in User Profile">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </button>
+            <div class="profile-hover-card">
+              <div class="profile-hover-header">
+                <strong style="font-size:14px;" id="popover-user-name">Aarav Sharma</strong>
+                <span class="mono" style="font-size:11px; color:var(--duotone-accent);" id="popover-user-passkey">CRED-401-IN</span>
+              </div>
+              <div class="profile-hover-row">
+                <span>Active Portal</span>
+                <strong id="popover-user-role">Client Workspace</strong>
+              </div>
+              <div class="profile-hover-row">
+                <span>Profile Role</span>
+                <strong id="popover-user-title">Senior Cloud Architect</strong>
+              </div>
+              <div class="profile-hover-row">
+                <span>Requested Loan</span>
+                <strong class="mono" id="popover-user-loan">₹28,00,000</strong>
+              </div>
+              <div class="profile-hover-row">
+                <span>Annual Income</span>
+                <strong class="mono" id="popover-user-income">₹32,00,000</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Sign Out Icon Button with Hover Tooltip -->
+          <button type="button" class="icon-action-btn danger-hover" id="logout-btn" data-tooltip="Sign Out" aria-label="Sign Out">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4" />
+              <polyline points="16 17 21 12 16 7" />
+              <line x1="21" y1="12" x2="9" y2="12" />
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <main class="workspace-content">
+
+        <!-- CLIENT VIEW 1: CLIENT OVERVIEW (DYNAMICALLY COLOR-CODED ELIGIBILITY STATUS) -->
+        <section id="view-client-overview" class="view-panel">
+          <div class="section-banner">
+            <div>
+              <h1>Hello there, <span id="client-welcome-name">Aarav Sharma</span></h1>
+              <p>
+                Credibiliti-AI evaluates your loan eligibility, protects your sensitive PAN, Bank Account/IFSC, and raw Credit Score using SHA-256 Zero-Knowledge encryption, and provides 1-click Approval Boosters if a loan needs restructuring.
+              </p>
+            </div>
+            <button type="button" class="primary-submit-btn" data-goto-view="client-wizard">
+              Open 3-Step Loan Check
+            </button>
+          </div>
+
+          <div class="kpi-grid-3">
+            <div class="uniform-card">
+              <span class="card-eyebrow">Current Eligibility Status</span>
+              <div class="kpi-value verdict-approved" id="client-kpi-verdict">APPROVED</div>
+              <span class="kpi-sub" id="client-kpi-score-band">Approval Odds: 95% | Est. EMI: ₹69,944/mo</span>
+            </div>
+            <div class="uniform-card">
+              <span class="card-eyebrow">Identity &amp; Data Protection</span>
+              <div class="kpi-value" style="color:var(--status-success);">Personal Details Protected</div>
+              <span class="kpi-sub">We protect your PAN, Account/IFSC &amp; raw score via SHA-256 masking</span>
+            </div>
+            <div class="uniform-card">
+              <span class="card-eyebrow">Active Bank Passkey</span>
+              <div class="kpi-value mono" id="client-kpi-passkey">CRED-401-IN</div>
+              <span class="kpi-sub">Ready for institutional underwriting verification</span>
+            </div>
+          </div>
+
+          <div class="role-pillars-grid">
+            <div class="pillar-card">
+              <span class="pillar-num mono">01 / SELECTIVE ZK PRIVACY</span>
+              <h3>Your Name Is Recognized, Your Sensitive KYC Stays Protected</h3>
+              <p>
+                Banks see your verified legal name and Passkey ID so they can issue a sanction letter to you, while your PAN, Account/IFSC, Employer Code, and raw Bureau Score remain cryptographically masked.
+              </p>
+            </div>
+            <div class="pillar-card">
+              <span class="pillar-num mono">02 / ZERO DEAD-END REJECTIONS</span>
+              <h3>1-Click Counterfactual Boosters</h3>
+              <p>
+                If your post-loan FOIR / DTI ratio or requested principal is outside bank policy, Credibiliti-AI calculates the exact tenure or collateral adjustment required to get approved immediately.
+              </p>
+            </div>
+            <div class="pillar-card">
+              <span class="pillar-num mono">03 / OFFICIAL AUTHORIZATION SEAL</span>
+              <h3>Legitimate Sanction &amp; Eligibility Pass</h3>
+              <p>
+                Generates a formal Authorization &amp; Pre-Approval Letter carrying the Credibiliti-AI Approved cryptographic seal, Basel III serviceability proof, and RBI Fair Practices explainability disclosure.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CLIENT VIEW 2: 3-STEP GUIDED LOAN WIZARD (WITH CIBIL SWITCH & BOTTOM-CENTER VERDICT TRACKER) -->
+        <section id="view-client-wizard" class="view-panel hidden">
+          <div class="wizard-stepper-bar">
+            <button type="button" class="wizard-step-tab active" data-wizard-step="1">
+              <span class="step-badge-num">1</span>
+              <span>Loan Goal &amp; Terms</span>
+            </button>
+            <button type="button" class="wizard-step-tab" data-wizard-step="2">
+              <span class="step-badge-num">2</span>
+              <span>Income &amp; Bureau Profile</span>
+            </button>
+            <button type="button" class="wizard-step-tab" data-wizard-step="3">
+              <span class="step-badge-num">3</span>
+              <span>Verdict &amp; Approval Boosters</span>
+            </button>
+          </div>
+
+          <!-- Step 1 -->
+          <div id="wizard-step-panel-1" class="uniform-card">
+            <span class="card-eyebrow">Step 1 of 3 | Facility Structure</span>
+            <h3>Configure Your Requested Loan</h3>
+            <div class="wizard-form-grid">
+              <div class="slider-control-card">
+                <div class="slider-header">
+                  <span>Requested Loan Principal</span>
+                  <span class="slider-val mono" id="val-loan-amount">₹28,00,000</span>
+                </div>
+                <input type="range" id="input-loan-amount" min="200000" max="10000000" step="100000" value="2800000" />
+              </div>
+
+              <div class="slider-control-card">
+                <div class="slider-header">
+                  <span>Repayment Tenure (Months)</span>
+                  <span class="slider-val mono" id="val-loan-term">48 Months</span>
+                </div>
+                <input type="range" id="input-loan-term" min="12" max="84" step="6" value="48" />
+              </div>
+
+              <div class="slider-control-card">
+                <div class="slider-header">
+                  <span>Collateral / Down Payment Security</span>
+                  <span class="slider-val mono" id="val-collateral">₹6,50,000</span>
+                </div>
+                <input type="range" id="input-collateral" min="0" max="5000000" step="50000" value="650000" />
+              </div>
+
+              <div class="slider-control-card">
+                <div class="slider-header">
+                  <span>Interest Rate (Annual APR %)</span>
+                  <span class="slider-val mono" id="val-apr">9.2%</span>
+                </div>
+                <input type="range" id="input-apr" min="6.5" max="18.0" step="0.1" value="9.2" />
+              </div>
+            </div>
+            <div class="wizard-footer-nav">
+              <span class="kpi-sub">Estimated Monthly EMI: <strong class="mono" id="step1-emi-preview">₹69,944/mo</strong></span>
+              <button type="button" class="primary-submit-btn" data-next-step="2">
+                Continue to Financial Profile
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2 (Includes Global Bureau Score <-> CIBIL Score Switch) -->
+          <div id="wizard-step-panel-2" class="uniform-card hidden">
+            <span class="card-eyebrow">Step 2 of 3 | Local Private Inputs</span>
+            <h3>Your Income &amp; Credit Bureau Profile</h3>
+            <div class="wizard-form-grid">
+              <div class="slider-control-card">
+                <div class="slider-header">
+                  <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+                    <span id="score-slider-label">Global Credit Bureau Score (300-850)</span>
+                    <div class="score-mode-switch" role="group" aria-label="Switch between Global Score and CIBIL Score">
+                      <button type="button" class="score-mode-btn active" id="btn-score-global" data-score-mode="global">Global</button>
+                      <button type="button" class="score-mode-btn" id="btn-score-cibil" data-score-mode="cibil">CIBIL</button>
+                    </div>
+                  </div>
+                  <span class="slider-val mono" id="val-credit-score">765</span>
+                </div>
+                <input type="range" id="input-credit-score" min="300" max="850" step="5" value="765" />
+              </div>
+
+              <div class="slider-control-card">
+                <div class="slider-header">
+                  <span>Gross Annual Income</span>
+                  <span class="slider-val mono" id="val-income">₹32,00,000</span>
+                </div>
+                <input type="range" id="input-income" min="400000" max="12000000" step="100000" value="3200000" />
+              </div>
+
+              <div class="slider-control-card">
+                <div class="slider-header">
+                  <span>Existing Monthly EMIs / Obligations</span>
+                  <span class="slider-val mono" id="val-monthly-debt">₹18,000</span>
+                </div>
+                <input type="range" id="input-monthly-debt" min="0" max="200000" step="2000" value="18000" />
+              </div>
+
+              <div class="slider-control-card">
+                <div class="slider-header">
+                  <span>Revolving Credit Utilization (%)</span>
+                  <span class="slider-val mono" id="val-utilization">21%</span>
+                </div>
+                <input type="range" id="input-utilization" min="1" max="95" step="1" value="21" />
+              </div>
+
+              <div class="slider-control-card">
+                <div class="slider-header">
+                  <span>Verified Employment / Business Tenure</span>
+                  <span class="slider-val mono" id="val-tenure">6.5 Years</span>
+                </div>
+                <input type="range" id="input-tenure" min="0" max="20" step="0.5" value="6.5" />
+              </div>
+
+              <div class="slider-control-card">
+                <div class="slider-header">
+                  <span>24-Month 30+ DPD Delinquencies</span>
+                  <span class="slider-val mono" id="val-delinq">0 Events</span>
+                </div>
+                <input type="range" id="input-delinq" min="0" max="4" step="1" value="0" />
+              </div>
+            </div>
+            <div class="wizard-footer-nav">
+              <button type="button" class="secondary-btn" data-next-step="1">Back to Loan Goal</button>
+              <button type="button" class="primary-submit-btn" data-next-step="3">
+                View Instant Verdict &amp; Boosters
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div id="wizard-step-panel-3" class="uniform-card hidden">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+              <div>
+                <span class="card-eyebrow">Step 3 of 3 | Real-Time Eligibility &amp; Recourse</span>
+                <h3 id="wizard-verdict-heading">Pre-Approved: Facility Meets All Institutional Thresholds</h3>
+              </div>
+              <span class="status-pill approved" id="wizard-verdict-badge">APPROVED</span>
+            </div>
+
+            <div class="kpi-grid-4">
+              <div class="slider-control-card">
+                <span class="card-eyebrow">Approval Probability</span>
+                <div class="kpi-value mono" id="wiz-approval-index">95%</div>
+              </div>
+              <div class="slider-control-card">
+                <span class="card-eyebrow">Post-Loan FOIR / DTI</span>
+                <div class="kpi-value mono" id="wiz-post-dti">33.0%</div>
+              </div>
+              <div class="slider-control-card">
+                <span class="card-eyebrow">Monthly EMI</span>
+                <div class="kpi-value mono" id="wiz-monthly-emi">₹69,944</div>
+              </div>
+              <div class="slider-control-card">
+                <span class="card-eyebrow">Collateral Security</span>
+                <div class="kpi-value mono" id="wiz-ltv-cov">23.2%</div>
+              </div>
+            </div>
+
+            <div>
+              <h4 style="font-size:15px; margin-bottom:6px;">1-Click Approval Boosters (Counterfactual Restructuring Paths)</h4>
+              <p class="kpi-sub" style="margin-bottom:14px;">
+                Apply any path below to optimize your monthly EMI, FOIR/DTI ratio, and approval tier:
+              </p>
+              <div class="booster-grid" id="client-booster-grid"></div>
+            </div>
+
+            <div class="wizard-footer-nav">
+              <button type="button" class="secondary-btn" data-next-step="2">Adjust Profile Inputs</button>
+              <button type="button" class="primary-submit-btn" data-goto-view="client-zk-vault">
+                Inspect Privacy Shield &amp; Passkey
+              </button>
+            </div>
+          </div>
+
+          <!-- BOTTOM-CENTER LIVE ELIGIBILITY TRACKER BLOCK -->
+          <div class="wizard-bottom-tracker" id="wizard-bottom-tracker">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span class="card-eyebrow" style="margin:0;">LIVE VERDICT TRACKER</span>
+              <span class="status-pill approved" id="tracker-verdict-pill">APPROVED</span>
+            </div>
+            <div class="tracker-metric-item">
+              <span>Approval Odds</span>
+              <strong class="mono" id="tracker-odds-val">95%</strong>
+            </div>
+            <div class="tracker-metric-item">
+              <span>Monthly EMI</span>
+              <strong class="mono" id="tracker-emi-val">₹69,944/mo</strong>
+            </div>
+            <div class="tracker-metric-item">
+              <span>Post-Loan FOIR</span>
+              <strong class="mono" id="tracker-foir-val">33.0%</strong>
+            </div>
+            <div class="tracker-metric-item">
+              <span id="tracker-score-label">Global Score</span>
+              <strong class="mono" id="tracker-score-val">765</strong>
+            </div>
+          </div>
+        </section>
+
+        <!-- CLIENT VIEW 3: SELECTIVE PRIVACY SHIELD & ZK-PASSKEY -->
+        <section id="view-client-zk-vault" class="view-panel hidden">
+          <div class="section-banner">
+            <div>
+              <h1>Selective Zero-Knowledge Privacy Shield</h1>
+              <p>
+                Your legal name (<strong id="zk-banner-name">Aarav Sharma</strong>) remains visible so banks can issue a legitimate sanction letter in your name, while we protect your personal details (PAN, Bank Account/IFSC, and raw Credit Score) via SHA-256 tokens.
+              </p>
+            </div>
+            <button type="button" class="primary-submit-btn" id="transmit-passkey-btn">
+              Authenticate Bank Desk to Transmit Passkey
+            </button>
+          </div>
+
+          <div class="split-2-col">
+            <div class="uniform-card">
+              <span class="card-eyebrow">Local Sovereign Inputs (On Your Device)</span>
+              <h3>Your Identity &amp; KYC Credentials</h3>
+              <div class="data-row-list">
+                <div class="data-row-item">
+                  <span>Client Legal Name (Shared)</span>
+                  <strong id="zk-raw-name">Aarav Sharma</strong>
+                </div>
+                <div class="data-row-item">
+                  <span>PAN / National KYC ID (Protected)</span>
+                  <strong class="mono" id="zk-raw-id">IN-PAN-AAAPS8921K</strong>
+                </div>
+                <div class="data-row-item">
+                  <span>Verified Employer (Protected)</span>
+                  <strong id="zk-raw-employer">Vanguard Cloud Systems India Pvt Ltd</strong>
+                </div>
+                <div class="data-row-item">
+                  <span>Settlement Account / IFSC (Protected)</span>
+                  <strong class="mono" id="zk-raw-iban">HDFC0001204 / 501004928172</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="uniform-card">
+              <span class="card-eyebrow">What the Bank Underwriter Receives</span>
+              <h3>Selective Disclosure &amp; SHA-256 Commitments</h3>
+              <div class="data-row-list" id="zk-blinded-token-list"></div>
+            </div>
+          </div>
+
+          <div class="uniform-card">
+            <span class="card-eyebrow">4 Cryptographic Eligibility Predicates Verified for Bank</span>
+            <div class="kpi-grid-4" id="zk-predicate-grid"></div>
+          </div>
+        </section>
+
+        <!-- CLIENT VIEW 4: OFFICIAL AUTHORIZATION & PRE-APPROVAL LETTER (PDF) -->
+        <section id="view-client-certificate" class="view-panel hidden">
+          <div class="section-banner">
+            <div>
+              <h1>Official Authorization &amp; Pre-Approval Letter</h1>
+              <p>Formal authorization document with cryptographic legitimacy disclosures and the official Credibiliti-AI Approved seal.</p>
+            </div>
+            <button type="button" class="primary-submit-btn" id="download-client-pdf-btn">
+              Download Authorization Letter (PDF)
+            </button>
+          </div>
+
+          <div class="certificate-sheet" id="client-certificate-sheet"></div>
+        </section>
+
+        <!-- BANK VIEW 1: INSTITUTIONAL DESK OVERVIEW -->
+        <section id="view-bank-overview" class="view-panel hidden">
+          <div class="section-banner">
+            <div>
+              <h1>Hello there, Institutional Underwriting Desk</h1>
+              <p>
+                Evaluate client loan facilities with Selective ZK-Privacy: client names are visible for sanctioning while sensitive PAN, Account/IFSC, and raw Bureau Scores remain protected behind verified boolean predicates.
+              </p>
+            </div>
+            <button type="button" class="primary-submit-btn" data-goto-view="bank-queue">
+              Open Client Queue
+            </button>
+          </div>
+
+          <div class="kpi-grid-3">
+            <div class="uniform-card">
+              <span class="card-eyebrow">Active Client Case</span>
+              <div class="kpi-value" id="bank-kpi-applicant">Aarav Sharma</div>
+              <span class="kpi-sub mono" id="bank-kpi-passkey">Passkey: CRED-401-IN</span>
+            </div>
+            <div class="uniform-card">
+              <span class="card-eyebrow">Basel III 12-Month PD</span>
+              <div class="kpi-value mono" id="bank-kpi-pd">2.22%</div>
+              <span class="kpi-sub" id="bank-kpi-ecl">Expected Credit Loss (ECL): ₹31,572</span>
+            </div>
+            <div class="uniform-card">
+              <span class="card-eyebrow">Regulatory Mandate</span>
+              <div class="kpi-value" style="color:var(--status-success);">RBI &amp; Basel III Ready</div>
+              <span class="kpi-sub">Based on RBI Fair Practices + SHAP Explainability</span>
+            </div>
+          </div>
+
+          <div class="role-pillars-grid">
+            <div class="pillar-card">
+              <span class="pillar-num mono">01 / SELECTIVE ZK-KYC SHIELD</span>
+              <h3>Recognize the Client, Protect Raw Identifiers</h3>
+              <p>
+                Underwriters see the client's name and verified eligibility predicates while sensitive PAN, Bank Account/IFSC, and raw Bureau Scores stay protected against data leaks.
+              </p>
+            </div>
+            <div class="pillar-card">
+              <span class="pillar-num mono">02 / BASEL III &amp; FOIR TELEMETRY</span>
+              <h3>PD, LGD, EAD &amp; Expected Credit Loss</h3>
+              <p>
+                Computes 12-month Probability of Default, collateral-adjusted Loss Given Default, Exposure at Default, and post-loan FOIR/DTI ratios in real time.
+              </p>
+            </div>
+            <div class="pillar-card">
+              <span class="pillar-num mono">03 / COUNTERFACTUAL SANCTIONING</span>
+              <h3>Convert Borderline Cases Into Safe Loans</h3>
+              <p>
+                Issue 1-click counterfactual restructuring offers that bring FOIR/DTI and Expected Credit Loss inside Tier-1 institutional policy thresholds.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- BANK VIEW 2: CLIENT ZK-PASSKEY QUEUE -->
+        <section id="view-bank-queue" class="view-panel hidden">
+          <div class="section-banner">
+            <div>
+              <h1>Client Passkey Underwriting Queue</h1>
+              <p>Select any client profile (including newly registered clients) to inspect their blinded KYC commitments and policy predicates.</p>
+            </div>
+            <button type="button" class="primary-submit-btn" data-goto-view="bank-basel">
+              Open Basel III, SHAP &amp; Visual Audit
+            </button>
+          </div>
+
+          <div class="kpi-grid-4" id="bank-archetype-cards"></div>
+
+          <div class="split-2-col">
+            <div class="uniform-card">
+              <span class="card-eyebrow">Client Identity &amp; Protected KYC Commitments</span>
+              <div class="data-row-list" id="bank-blinded-pii-list"></div>
+            </div>
+            <div class="uniform-card">
+              <span class="card-eyebrow">Verified Policy Threshold Predicates</span>
+              <div class="data-row-list" id="bank-predicate-list"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- BANK VIEW 3: BASEL III, SHAP EXPLAINER & ALIGNED VISUAL CHARTS -->
+        <section id="view-bank-basel" class="view-panel hidden">
+          <div class="role-pillars-grid">
+            <div class="pillar-card">
+              <span class="pillar-num mono">CONCEPT 01 / BASEL III CAPITAL TELEMETRY</span>
+              <h3>How Basel III Works (`PD x LGD x EAD = ECL`)</h3>
+              <p>
+                Instead of guessing risk, Basel III measures <strong>PD</strong> (12-month default probability), <strong>LGD</strong> (loss severity after collateral recovery), and <strong>EAD</strong> (loan exposure) to compute exact <strong>Expected Credit Loss (ECL)</strong>.
+              </p>
+            </div>
+            <div class="pillar-card">
+              <span class="pillar-num mono">CONCEPT 02 / SHAP ATTRIBUTION WATERFALL</span>
+              <h3>How SHAP Protects Fairness</h3>
+              <p>
+                SHAP (SHapley Additive exPlanations) breaks the credit model open to show the exact positive or negative basis-point contribution of each factor-based on RBI Fair Practices, ECOA, and GDPR Art. 22.
+              </p>
+            </div>
+            <div class="pillar-card">
+              <span class="pillar-num mono">CONCEPT 03 / CLIENT RECOURSE BENEFIT</span>
+              <h3>How Both Concepts Help the Client</h3>
+              <p>
+                By pinpointing which factor pushed PD or FOIR above the threshold, the engine computes the smallest tenure or principal adjustment needed to approve the client instead of rejecting them.
+              </p>
+            </div>
+          </div>
+
+          <div class="kpi-grid-4">
+            <div class="uniform-card">
+              <span class="card-eyebrow">12M Probability of Default (PD)</span>
+              <div class="kpi-value mono" id="basel-pd-val">2.22%</div>
+              <span class="kpi-sub" id="basel-tier-label">Tier-1 Prime Sovereign</span>
+            </div>
+            <div class="uniform-card">
+              <span class="card-eyebrow">Loss Given Default (LGD)</span>
+              <div class="kpi-value mono" id="basel-lgd-val">50.8%</div>
+              <span class="kpi-sub">Collateral-Adjusted Severity</span>
+            </div>
+            <div class="uniform-card">
+              <span class="card-eyebrow">Expected Credit Loss (ECL)</span>
+              <div class="kpi-value mono" id="basel-ecl-val">₹31,572</div>
+              <span class="kpi-sub" id="basel-ead-label">EAD: ₹28,00,000</span>
+            </div>
+            <div class="uniform-card">
+              <span class="card-eyebrow">Post-Loan FOIR / DTI &amp; LTI</span>
+              <div class="kpi-value mono" id="basel-dti-val">33.0%</div>
+              <span class="kpi-sub" id="basel-lti-label">LTI Multiple: 0.88x</span>
+            </div>
+          </div>
+
+          <div class="split-2-col">
+            <div class="uniform-card">
+              <span class="card-eyebrow">7-Factor SHAP Log-Odds Attribution</span>
+              <h3>Positive vs. Adverse Risk Drivers</h3>
+              <div class="shap-list" id="bank-shap-list"></div>
+            </div>
+
+            <div class="uniform-card">
+              <span class="card-eyebrow">Counterfactual Restructuring Desk</span>
+              <h3>Approve Facility via 1-Click Restructure</h3>
+              <div class="data-row-list" id="bank-recourse-list"></div>
+            </div>
+          </div>
+
+          <!-- Bottom Visual Analytics Charts -->
+          <div class="split-2-col">
+            <div class="uniform-card">
+              <span class="card-eyebrow">Visual Diagnostic 01 | Outflow &amp; ECL Comparison</span>
+              <h3>Current Structure vs. Counterfactual Restructured Facility</h3>
+              <div class="chart-svg-wrap" id="chart-outflow-container"></div>
+            </div>
+
+            <div class="uniform-card">
+              <span class="card-eyebrow">Visual Diagnostic 02 | Risk Quadrant Map</span>
+              <h3>Post-Loan FOIR/DTI (%) vs. 12-Month Default Risk (PD %)</h3>
+              <div class="chart-svg-wrap" id="chart-quadrant-container"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- BANK VIEW 4: INSTITUTIONAL SANCTION & AUDIT LETTER (PDF) -->
+        <section id="view-bank-certificate" class="view-panel hidden">
+          <div class="section-banner">
+            <div>
+              <h1>Institutional Basel III Sanction &amp; Regulatory Audit Letter</h1>
+              <p>Formal underwriting and authorization record carrying the official Credibiliti-AI Approved cryptographic seal.</p>
+            </div>
+            <button type="button" class="primary-submit-btn" id="download-bank-pdf-btn">
+              Export Institutional Audit Letter (PDF)
+            </button>
+          </div>
+
+          <div class="certificate-sheet" id="bank-certificate-sheet"></div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
+<!-- ==========================================================================
+     CREDIBILITI-AI | CONCEPT & BUILT BY TECHWITHAMIR.COM
+     ========================================================================== -->
